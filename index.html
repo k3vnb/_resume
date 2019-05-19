@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>React Hello World</title>
+</head>
+<body>
+    <div id="application-root"></div>
+
+    <script
+        src="https://unpkg.com/react@16/umd/react.development.js">
+    </script>
+    <script
+        src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
+    </script>
+    <script
+    src="https://unpkg.com/babel-standalone@6/babel.min.js">
+    </script>
+    <script type="text/babel">
+function App(props) {
+  console.log(props)
+  return (
+    <div>
+      {props.children}
+    </div>
+  );
+}
+
+// Nested elements inside the App
+ReactDOM.render(
+  <App className='my-class'>
+    <div>
+    <header>
+      <h1>Sally Student's Web Developer Resume</h1>
+    </header>
+    <address>
+      <h2>Contact</h2>
+      <ul className="address-list">
+        <li>Sally Student</li>
+        <li>123 Semver Ave, Portland, OR 97214</li>
+        <li>Phone: 555-243-3322</li>
+        <li>Email: <a href="mailto:sallystudent@thinkful.com?subject=Hi%20Sally%20Student">sallystudent@thinkful.com</a></li>
+      </ul>
+    </address>
+    <main>
+      <section>
+        <h2>About Me</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Morocco_%28film%29_1930._Josef_von_Sternberg%2C_director._Marlene_Dietrich_with_top_hat.jpg" alt="Sally Student Profile Picture" height="150"/>
+        <p>Greetings, I am a web developer and student of web development. My primary skill set includes HTML, CSS, PHP, and Javascript.</p>
+      </section>
+      <section>
+        <h2>Experience</h2>
+        <div className="experience-block">
+          <h4>Title: Web Developer</h4>
+          <h5>Location: Twill Marketing</h5>
+          <h5>Dates: Oct 2015-Current</h5>
+          <h5>Duties:</h5>
+          <ul>
+            <li>
+              Design sites for clients according to mockups
+            </li>
+            <li>
+              Perform code reviews for associate developers
+            </li>
+            <li>
+              Create mockups in Illustrator/Sketch/Photoshop
+            </li>
+          </ul>
+        </div>      
+        <div className="experience-block">
+          <h4>Title: Social Media Manager</h4>
+          <h5>Location: Sarasota Springs Media</h5>
+          <h5>Dates: Oct 2012-Sep 2015</h5>
+          <h5>Duties:</h5>
+          <ul>
+            <li>
+              Develop marketing platform for brands
+            </li>
+            <li>
+              Design sales strategies based on best practices
+            </li>
+            <li>
+              Create aesthetic media posts for clients, generating sales and followers
+            </li>
+          </ul>
+        </div>       
+        <div className="experience-block">
+          <h4>Title: Social Media Associate</h4>
+          <h5>Location: Thankful Media</h5>
+          <h5>Dates: June 2010-Oct 2012</h5>
+          <h5>Duties:</h5>
+          <ul>
+            <li>
+              Generated followers and sales strategies for clients
+            </li>
+            <li>
+              Tracked spending and ROI
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h2>Education</h2>
+        <div className="experience-block">
+          <h4>School: University of Florida</h4>
+          <h5>Degree: BA</h5>
+          <h5>Major: Marketing</h5>
+          <h5>Dates: September 2004-May 2008</h5>
+        </div>
+        <div className="experience-block">
+          <h4>School: Code School</h4>
+          <h5>Degree: Certificate</h5>
+          <h5>Focus: Web Development</h5>
+          <h5>Dates: September 2008-May 2010</h5>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <em>&copy; Sally Student 2019</em>
+    </footer>
+    </div>
+  </App>,
+  document.querySelector('#application-root')
+);
+    </script>
+</body>
+</html>
+
